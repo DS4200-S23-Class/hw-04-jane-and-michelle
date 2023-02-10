@@ -34,3 +34,8 @@ body {
 	stroke: rgb(0, 0, 0);
 	stroke-width: 2;
 }
+
+/* Style the points when it's hovered over */
+circle:hover {
+  fill: rgb(255, 0, 0);
+}
