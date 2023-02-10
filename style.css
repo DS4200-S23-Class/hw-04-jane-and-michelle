@@ -23,18 +23,14 @@ body {
 	flex: 40%;
 }
 
+/* Set height and width of the svg frame */
 #frame {
 	width: 500px;
 	height: 500px;
 }
 
-svg.graph {
-  height: 500px;
-  width: 800px;
-}
-
-svg.graph .grid {
-  stroke: white;
-  stroke-dasharray: 1 2;
-  stroke-width: 1;
+/* Style axes color and width */
+.axes {
+	stroke: rgb(0, 0, 0);
+	stroke-width: 2;
 }

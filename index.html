@@ -19,19 +19,33 @@
       <div id="column1">
           <div>
                 <svg id="frame">
+                    <!--  Horizointal line for x-axis -->
+                    <svg class="axes" height="500" width="500">
+                        <line x1="0" y1="500" x2="500" y2="500"/>
+                    </svg>
 
+                    <!-- Vertical line for y-axis -->
+                    <svg class="axes" height="500" width="500">
+                        <line x1="0" y1="500" x2="0" y2="0"/>
+                    </svg>
+
+                    <!-- Point (1,2) and label -->
                     <circle cx="50" cy="400" r="5"/>
                     <text x="50" y="400">(1, 2)</text> 
 
+                    <!-- Point (2,4) and label -->
                     <circle cx="100" cy="300" r="5"/>
                     <text x="100" y="300">(2, 4)</text> 
 
+                    <!-- Point (6,2) and label -->
                     <circle cx="300" cy="400" r="5"/>
                     <text x="300" y="400">(6, 2)</text> 
 
+                    <!-- Point (9,9) and label -->
                     <circle cx="450" cy="50" r="5"/>
                     <text x="450" y="50">(9, 9)</text> 
                 </svg>
+
             </div>
       </div>
       <div id="column2">
@@ -44,6 +58,7 @@
         <ul>
             <li> <a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">Two Column Flexbox</a>
             </li>
+            <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</li>
         </ul>
     </div>
 
@@ -53,5 +68,3 @@
 </body>
 
 </html>
-
-<!--In the left column, use SVG's to create a scatter plot with the following points: (1, 2), (2, 4), (6, 2), (9, 9). You should include axes, and your points should be plotted proportionally to distances on your axes, but you do not need to add axis labels or titles.-->
