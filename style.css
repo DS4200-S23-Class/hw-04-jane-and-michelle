@@ -39,3 +39,8 @@ body {
 circle:hover {
   fill: rgb(255, 0, 0);
 }
+
+.ptStyle {
+	stroke: skyblue;
+  	stroke-width: 10px;
+} 
