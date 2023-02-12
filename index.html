@@ -32,25 +32,25 @@
                     <!-- Point (1,2) and label -->
                     <svg>
                         <circle id="(1,2)" cx="50" cy="400" r="10"/>
-                        <text x="60" y="400">(1,2)</text> 
+                        <text x="60" y="395">(1,2)</text> 
                     </svg>
 
                     <!-- Point (2,4) and label -->
                     <svg>
                         <circle id="(2,4)" cx="100" cy="300" r="10"/>
-                        <text x="110" y="300">(2,4)</text> 
+                        <text x="110" y="295">(2,4)</text> 
                     </svg>
 
                     <!-- Point (6,2) and label -->
                     <svg>
                         <circle id="(6,2)" cx="300" cy="400" r="10"/>
-                        <text x="310" y="400">(6,2)</text> 
+                        <text x="310" y="395">(6,2)</text> 
                     </svg>
 
                     <!-- Point (9,9) and label -->
                     <svg>
                         <circle id="(9,9)" cx="450" cy="50" r="10"/>
-                        <text x="460" y="50">(9,9)</text>    
+                        <text x="460" y="45">(9,9)</text>    
                     </svg>
 
                 </svg>
@@ -64,7 +64,9 @@
             <form id="x">
                 <label for="points">Select the x coordinate for the point you want to add: </label>
                 <select id="x_coord" name="points" onchange="setXValue()">
-                <!-- name is used to link together things in the same form --> 
+
+                <!-- name is used to link together things in the same form -->
+                <!-- added options under select --> 
                 <option selected disabled>Choose one</option>
                 <option name="coordinates" value="1"/>1</option>
                 <option name="coordinates" value="2"/>2</option>
@@ -81,6 +83,8 @@
 
                 <label for="points">Select the y coordinate for the point you want to add: </label>
                 <select id="y_coord" name="points" onchange="setYValue()">
+
+                <!-- added options under select --> 
                 <option selected disabled>Choose one</option>
                 <option name="coordinates" value="1"/>1</option>
                 <option name="coordinates" value="2"/>2</option>
@@ -93,6 +97,7 @@
                 <option name="coordinates" value="9"/>9</option>
                 </select>
             </form>
+            <!-- create submit button -->
             <button type="submit" id="subButton">Add Point</button>
 
         </div>
