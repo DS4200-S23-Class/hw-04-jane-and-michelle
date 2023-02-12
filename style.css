@@ -40,8 +40,36 @@ circle:hover {
   fill: rgb(255, 0, 0);
 }
 
+/* format the points when clicked */
 .ptStyle {
 	stroke: skyblue;
-  	stroke-width: 10px;
+  stroke-width: 10px;
 } 
 
+/* format text size */
+text {
+	font-size: 15px;
+}
+
+/* format select */
+select {
+	padding-inline: 5px;
+
+}
+
+/* format label */
+label {
+	line-height: 2.5;
+}
+
+/* format id selected-pt */
+#selected-pt {
+	padding-inline: 0px;
+	line-height: 2.5;
+}
+
+/* format button */
+button {
+	line-height: 1;
+	padding:5px;
+}
