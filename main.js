@@ -37,10 +37,10 @@ function addPoint(subButton){
 	// set values for x and y on the grid
 	let xValue = x_coord * 50;
 	let yValue = 500 - (y_coord * 50);
-
+	
 	// set element id
 	let elementID = "(" + x_coord + "," + y_coord + ")";
-	
+
 	// create a new svg
 	let newSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
