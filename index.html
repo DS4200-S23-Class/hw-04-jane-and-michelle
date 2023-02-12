@@ -32,26 +32,27 @@
                     <!-- Point (1,2) and label -->
                     <svg>
                         <circle id="(1,2)" cx="50" cy="400" r="10"/>
-                        <text x="50" y="400">(1, 2)</text> 
+                        <text x="60" y="400">(1,2)</text> 
                     </svg>
 
                     <!-- Point (2,4) and label -->
                     <svg>
                         <circle id="(2,4)" cx="100" cy="300" r="10"/>
-                        <text x="100" y="300">(2, 4)</text> 
+                        <text x="110" y="300">(2,4)</text> 
                     </svg>
 
                     <!-- Point (6,2) and label -->
                     <svg>
                         <circle id="(6,2)" cx="300" cy="400" r="10"/>
-                        <text x="300" y="400">(6, 2)</text> 
+                        <text x="310" y="400">(6,2)</text> 
                     </svg>
 
                     <!-- Point (9,9) and label -->
                     <svg>
                         <circle id="(9,9)" cx="450" cy="50" r="10"/>
-                        <text x="450" y="50">(9, 9)</text>    
+                        <text x="460" y="50">(9,9)</text>    
                     </svg>
+
                 </svg>
 
             </div>
@@ -62,35 +63,37 @@
         <div>
             <form id="x">
                 <label for="points">Select the x coordinate for the point you want to add: </label>
-                <select id="points" name="points">
+                <select id="x_coord" name="points" onchange="setXValue()">
                 <!-- name is used to link together things in the same form --> 
-                <option name="coordinates" value="x1"/>1</option>
-                <option name="coordinates" value="x2"/>2</option>
-                <option name="coordinates" value="x3"/>3</option>
-                <option name="coordinates" value="x4"/>4</option>
-                <option name="coordinates" value="x5"/>5</option>
-                <option name="coordinates" value="x6"/>6</option>
-                <option name="coordinates" value="x7"/>7</option>
-                <option name="coordinates" value="x8"/>8</option>
-                <option name="coordinates" value="x9"/>9</option>
+                <option selected disabled>Choose one</option>
+                <option name="coordinates" value="1"/>1</option>
+                <option name="coordinates" value="2"/>2</option>
+                <option name="coordinates" value="3"/>3</option>
+                <option name="coordinates" value="4"/>4</option>
+                <option name="coordinates" value="5"/>5</option>
+                <option name="coordinates" value="6"/>6</option>
+                <option name="coordinates" value="7"/>7</option>
+                <option name="coordinates" value="8"/>8</option>
+                <option name="coordinates" value="9"/>9</option>
                 </select>
 
                 <br>
 
                 <label for="points">Select the y coordinate for the point you want to add: </label>
-                <select id="points" name="points">
-                <option name="coordinates" value="y1"/>1</option>
-                <option name="coordinates" value="y2"/>2</option>
-                <option name="coordinates" value="y3"/>3</option>
-                <option name="coordinates" value="y4"/>4</option>
-                <option name="coordinates" value="y5"/>5</option>
-                <option name="coordinates" value="y6"/>6</option>
-                <option name="coordinates" value="y7"/>7</option>
-                <option name="coordinates" value="y8"/>8</option>
-                <option name="coordinates" value="y9"/>9</option>
+                <select id="y_coord" name="points" onchange="setYValue()">
+                <option selected disabled>Choose one</option>
+                <option name="coordinates" value="1"/>1</option>
+                <option name="coordinates" value="2"/>2</option>
+                <option name="coordinates" value="3"/>3</option>
+                <option name="coordinates" value="4"/>4</option>
+                <option name="coordinates" value="5"/>5</option>
+                <option name="coordinates" value="6"/>6</option>
+                <option name="coordinates" value="7"/>7</option>
+                <option name="coordinates" value="8"/>8</option>
+                <option name="coordinates" value="9"/>9</option>
                 </select>
             </form>
-            <button type="submit">Add Point</button>
+            <button type="submit" id="subButton">Add Point</button>
 
         </div>
       </div>
@@ -99,11 +102,11 @@
 <h2 class="centered">Acknowledgements</h2>
     <div>
         <ul>
-            <li> <a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">Two Column Flexbox</a>
-            </li>
-            <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</li>
-            <li><a href="https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb">Event Listener with Arguments</li>
-            <li><a href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</li>
+            <li> <a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">Two Column Flexbox</a></li>
+            <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</a></li>
+            <li><a href="https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb">Event Listener with Arguments</a></li>
+            <li><a href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">JavaScript Create Elements</a></li>
         </ul>
     </div>
 
