@@ -42,12 +42,12 @@ function addPoint(subButton){
 	let elementID = "(" + x_coord + "," + y_coord + ")";
 	
 	// create a new svg
-	let newSvg = document.createElementNS('http://www.w3.org/2000/svg', "svg");
+	let newSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 	// create a new circle and set attributes for the new circle
-	let newCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+	let newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	newCircle.setAttribute("id", elementID);
-	newCircle.setAttribute('cx', xValue);
+	newCircle.setAttribute("cx", xValue);
 	newCircle.setAttribute("cy", yValue);
 	newCircle.setAttribute("r", 10);
 
@@ -56,7 +56,7 @@ function addPoint(subButton){
 	let textYCoord = yValue - 5;
 
 	// create a new text element and set attributes for the new text element
-	let newText = document.createElementNS('http://www.w3.org/2000/svg', "text");
+	let newText = document.createElementNS("http://www.w3.org/2000/svg", "text");
 	newText.setAttribute("x", textXCoord);
 	newText.setAttribute("y", textYCoord);
 	newText.innerHTML = elementID;
