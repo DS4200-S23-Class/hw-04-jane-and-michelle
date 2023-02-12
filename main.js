@@ -1,31 +1,27 @@
-
 // create a function that displays the coordinate of the point clicked
+// takes in point parameter which is the id of the point
 function pointClicked(point){
+	// variable to store the point
 	let clickedPt = document.getElementById(point);
+
+	// give toggle function to the point
 	clickedPt.classList.toggle("ptStyle");
+
+	// variable to store text that tells user the last point clicked
 	let newText = "Last Point Clicked: " + point;
+
+	// assign the variable to the id 
 	document.getElementById("selected-pt").innerHTML = newText;
 }
 
-// add event handler to points using anonymous function calling
-document.getElementById("(1,2)").addEventListener("click", () => {pointClicked("(1,2)")});
-document.getElementById("(2,4)").addEventListener("click", () => {pointClicked("(2,4)")});
-document.getElementById("(6,2)").addEventListener("click", () => {pointClicked("(6,2)")});
-document.getElementById("(9,9)").addEventListener("click", () => {pointClicked("(9,9)")});
+// add event handler - looping/iterating through list of points and use anonymous function to execute pointClicked
+let pts = document.getElementsByTagName("circle");
+for (let idx = 0; idx < pts.length; idx++){
+    pts[idx].addEventListener("click", () => {pointClicked(pts[idx].id)});
+}
 
-
-// set x value for coordinate once selected value from options
-//function setXValue() {
-//	let x_coord = document.getElementById("x_coord").value;
-//}
-
-// set y value for coordinate once selected value from options
-//function setYValue() {
-//	let y_coord = document.getElementById("y_coord").value;
-//}
-
-// add a function to add a point to the graph when submit button is clicked
-function addPoint(subButton){
+// create a function to add a point to the graph when submit button is clicked
+function addPoint(){
 	
 	// set the x and y coordinate values for new point
 	let x_coord = document.getElementById("x_coord").value;
@@ -68,10 +64,10 @@ function addPoint(subButton){
 	// append new created svg to svg frame
 	svgFrame.appendChild(newSvg);
 
-	// add event handler to new point using anonymous function calling
-	document.getElementById(elementID).addEventListener("click", () => {pointClicked(elementID)});
+	// add event handler to new point using anonymous function - toggle for new point
+	newCircle.addEventListener("click", () => {pointClicked(elementID)});
 }
 
-// add event handler to submit button using anonymous function call
-document.getElementById("subButton").addEventListener("click", () => {addPoint()});
+// add event handler to submit button in order to execute the addPoint function
+document.getElementById("subButton").addEventListener("click", addPoint);
 

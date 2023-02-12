@@ -13,11 +13,15 @@
 
 
 <body>
+    <!-- Add centered heading for the web page -->
     <h1 class="centered">hw-04: Event Handling</h1>
 
+    <!-- Container as the parent for the flexbox -->
     <div class="container">
-      <div id="column1">
-          <div>
+        <!-- One of the childrens for the flexbox - left column -->
+        <div id="column1">
+            <div>
+                <!-- Svg for all the circles, lines, and texts -->
                 <svg id="frame">
                     <!--  Horizontal line for x-axis -->
                     <svg class="axes" height="500" width="500">
@@ -52,75 +56,84 @@
                         <circle id="(9,9)" cx="450" cy="50" r="10"/>
                         <text x="460" y="45">(9,9)</text>    
                     </svg>
-
                 </svg>
-
             </div>
-      </div>
-      <div id="column2">
-        <div id="selected-pt">
         </div>
+        <!-- Other children for the flexbox - right column -->
+        <div id="column2">
+            <!-- Text telling user last point clicked -->
+            <div id="selected-pt">
+                Last Point Clicked: 
+            </div>
+            <div>
+                <form id="options">
+                    <!-- set label for select element -->
+                    <label for="points">Select x coordinate for the new point you want to add: </label>
+                    <!-- dropdown list -->
+                    <select id="x_coord" name="points">
+                        <!-- added options under select --> 
+                        <option selected disabled>Choose one</option>
+                        <option value="1"/>1</option>
+                        <option value="2"/>2</option>
+                        <option value="3"/>3</option>
+                        <option value="4"/>4</option>
+                        <option value="5"/>5</option>
+                        <option value="6"/>6</option>
+                        <option value="7"/>7</option>
+                        <option value="8"/>8</option>
+                        <option value="9"/>9</option>
+                    </select>
+
+                    <br>
+
+                    <!-- set label for select element -->
+                    <label for="points">Select y coordinate for the new point you want to add: </label>
+                    <!-- dropdown list -->
+                    <select id="y_coord" name="points">
+                        <!-- added options under select --> 
+                        <option selected disabled>Choose one</option>
+                        <option value="1"/>1</option>
+                        <option value="2"/>2</option>
+                        <option value="3"/>3</option>
+                        <option value="4"/>4</option>
+                        <option value="5"/>5</option>
+                        <option value="6"/>6</option>
+                        <option value="7"/>7</option>
+                        <option value="8"/>8</option>
+                        <option value="9"/>9</option>
+                    </select>
+                </form>
+                <!-- create submit button -->
+                <button type="submit" id="subButton">Add Point</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered acknowledgements header -->
+    <h2 class="centered">Acknowledgements</h2>
         <div>
-            <form id="x">
-                <!-- set label for select element -->
-                <label for="points">Select x coordinate for the new point you want to add: </label>
-                <!--<select id="x_coord" name="points" onchange="setXValue()"> -->
-                <select id="x_coord" name="points">
-
-
-                <!-- name is used to link together things in the same form -->
-                <!-- added options under select --> 
-                <option selected disabled>Choose one</option>
-                <option name="coordinates" value="1"/>1</option>
-                <option name="coordinates" value="2"/>2</option>
-                <option name="coordinates" value="3"/>3</option>
-                <option name="coordinates" value="4"/>4</option>
-                <option name="coordinates" value="5"/>5</option>
-                <option name="coordinates" value="6"/>6</option>
-                <option name="coordinates" value="7"/>7</option>
-                <option name="coordinates" value="8"/>8</option>
-                <option name="coordinates" value="9"/>9</option>
-                </select>
-
-                <br>
-                <!-- set label for select element -->
-                <label for="points">Select y coordinate for the new point you want to add: </label>
-                <select id="y_coord" name="points">
-                <!-- <select id="y_coord" name="points" onchange="setYValue()"> -->
-
-                <!-- added options under select --> 
-                <option selected disabled>Choose one</option>
-                <option name="coordinates" value="1"/>1</option>
-                <option name="coordinates" value="2"/>2</option>
-                <option name="coordinates" value="3"/>3</option>
-                <option name="coordinates" value="4"/>4</option>
-                <option name="coordinates" value="5"/>5</option>
-                <option name="coordinates" value="6"/>6</option>
-                <option name="coordinates" value="7"/>7</option>
-                <option name="coordinates" value="8"/>8</option>
-                <option name="coordinates" value="9"/>9</option>
-                </select>
-            </form>
-            <!-- create submit button -->
-            <button type="submit" id="subButton">Add Point</button>
-
+            <ul>
+                <!-- Linked used -->
+                <li>
+                    <a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">Two Column Flexbox</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</a>
+                </li>
+                <li>
+                    <a href="https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb">Event Listener with Arguments</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">JavaScript Create Elements</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
 
-<h2 class="centered">Acknowledgements</h2>
-    <div>
-        <ul>
-            <li> <a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">Two Column Flexbox</a></li>
-            <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</a></li>
-            <li><a href="https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb">Event Listener with Arguments</a></li>
-            <li><a href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">JavaScript Create Elements</a></li>
-        </ul>
-    </div>
-
-<!-- Link js filter -->
-<script src="main.js"></script>    
+    <!-- Link js file -->
+    <script src="main.js"></script>    
 
 </body>
 
