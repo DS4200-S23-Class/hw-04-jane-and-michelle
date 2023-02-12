@@ -19,7 +19,7 @@
       <div id="column1">
           <div>
                 <svg id="frame">
-                    <!--  Horizointal line for x-axis -->
+                    <!--  Horizontal line for x-axis -->
                     <svg class="axes" height="500" width="500">
                         <line x1="0" y1="500" x2="500" y2="500"/>
                     </svg>
@@ -64,7 +64,9 @@
             <form id="x">
                 <!-- set label for select element -->
                 <label for="points">Select x coordinate for the new point you want to add: </label>
-                <select id="x_coord" name="points" onchange="setXValue()">
+                <!--<select id="x_coord" name="points" onchange="setXValue()"> -->
+                <select id="x_coord" name="points">
+
 
                 <!-- name is used to link together things in the same form -->
                 <!-- added options under select --> 
@@ -83,7 +85,8 @@
                 <br>
                 <!-- set label for select element -->
                 <label for="points">Select y coordinate for the new point you want to add: </label>
-                <select id="y_coord" name="points" onchange="setYValue()">
+                <select id="y_coord" name="points">
+                <!-- <select id="y_coord" name="points" onchange="setYValue()"> -->
 
                 <!-- added options under select --> 
                 <option selected disabled>Choose one</option>

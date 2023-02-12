@@ -15,21 +15,21 @@ document.getElementById("(9,9)").addEventListener("click", () => {pointClicked("
 
 
 // set x value for coordinate once selected value from options
-function setXValue() {
-	let x_coord = document.getElementById("x_coord").value;
-}
+//function setXValue() {
+//	let x_coord = document.getElementById("x_coord").value;
+//}
 
 // set y value for coordinate once selected value from options
-function setYValue() {
-	let y_coord = document.getElementById("y_coord").value;
-}
+//function setYValue() {
+//	let y_coord = document.getElementById("y_coord").value;
+//}
 
 // add a function to add a point to the graph when submit button is clicked
 function addPoint(subButton){
 	
 	// set the x and y coordinate values for new point
-	let x_coord = document.getElementById('x_coord').value;
-	let y_coord = document.getElementById('y_coord').value;
+	let x_coord = document.getElementById("x_coord").value;
+	let y_coord = document.getElementById("y_coord").value;
 
 	// get the element svg frame by id frame
 	let svgFrame = document.getElementById("frame");
@@ -73,5 +73,5 @@ function addPoint(subButton){
 }
 
 // add event handler to submit button using anonymous function call
-document.getElementById('subButton').addEventListener("click", () => {addPoint()});
+document.getElementById("subButton").addEventListener("click", () => {addPoint()});
 
