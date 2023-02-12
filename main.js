@@ -36,7 +36,7 @@ function addPoint(subButton){
 
 	// set values for x and y on the grid
 	let xValue = x_coord * 50;
-	let yValue = y_coord * 50;
+	let yValue = 500 - (y_coord * 50);
 
 	// set element id
 	let elementID = "(" + x_coord + "," + y_coord + ")";
@@ -51,13 +51,14 @@ function addPoint(subButton){
 	newCircle.setAttribute("cy", yValue);
 	newCircle.setAttribute("r", 10);
 
-	// set x coordinate for text location
+	// set x and y coordinates for text location
 	let textXCoord = xValue + 10;
+	let textYCoord = yValue - 5;
 
 	// create a new text element and set attributes for the new text element
-	let newText = document.createElement("text");
+	let newText = document.createElementNS('http://www.w3.org/2000/svg', "text");
 	newText.setAttribute("x", textXCoord);
-	newText.setAttribute("y", yValue);
+	newText.setAttribute("y", textYCoord);
 	newText.innerHTML = elementID;
 
 	// append new circle and new text elements to the new created svg
@@ -72,5 +73,5 @@ function addPoint(subButton){
 }
 
 // add event handler to submit button using anonymous function call
-document.getElementById('subButton').addEventListener("click", () => {addPoint()})
+document.getElementById('subButton').addEventListener("click", () => {addPoint()});
 
